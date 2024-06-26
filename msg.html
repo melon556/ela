@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>For You</title>
+        <link rel="stylesheet" href="msg.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Edu+NSW+ACT+Foundation:wght@500&family=Kalam&family=Nunito:wght@300&display=swap" rel="stylesheet">
+
+        <style>
+            .loader {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: #333333;
+                transition: opacity 0.75s, visibility 0.75s;
+            }
+
+            .loader--hidden {
+                opacity: 0;
+                visibility: hidden;
+            }
+
+            .loader::after {
+                content: "";
+                width: 40px;
+                height: 40px;
+                border: 8px solid #dddddd;
+                border-top-color: #1498cc;
+                border-radius: 50%;
+                animation: loading 0.75s ease infinite;
+            }
+
+            @keyframes loading {
+                from {transform: rotate(0turn);}
+                to {transform: rotate(1turn);}
+            }
+        </style>
+
+        </head>
+
+    <body>
+        <div class="loader loader--hidden"></div>
+        <div id="progressbar"></div>
+        <div id="scrollPath"></div>
+        
+        <header class="header">
+            <a href="#" class="logo"></a>
+
+            <nav class="navbar">
+                <a href="home.html" class="Home">Home</a>
+                <a href="#" class="Message">For You</a>
+                <a href="music/music.html" class="Music">Music</a>
+                <a href="wallpaper/wallpaper-1.html" class="Wallpaper">Wallpaper</a>
+                <a href="about.html" class="About">About</a>
+            </nav>
+        </header>
+ 
+        <section class="home" id="home">
+            <div class="wrapper">
+                <div class="top">
+                    <p>Dear Ela</p>
+                </div>
+                <div class="middle">
+                    <br>
+                    <p></p>
+                    <br><br>
+                    <p>&emsp;&emsp;On this special day, I wanted to take a moment to celebrate the incredible person you are and express how grateful I am to have you as a friend. Your birthday is not just a day to mark the passage of time, it's a day to acknowledge the beautiful soul that you are and all the wonderful qualities that make you so amazing.</p>
+                    <br><br>
+                    <p>&emsp;&emsp;Throughout the years, I've had the privilege of witnessing your growth, your triumphs, and your unwavering spirit. You've faced challenges with courage and grace, and you've achieved remarkable things. Your determination is inspiring, and your kindness knows no bounds.</p>
+                    <br><br>
+                    <p>&emsp;&emsp;From the moment we became friends, my life has been filled with more joy, laughter, and unforgettable moments. Your unwavering support, your infectious enthusiasm, and your caring heart have made my life so much richer. You have an incredible ability to turn ordinary moments into extraordinary memories. Whether it's our adventures together, the late-night conversations, or the times we've simply shared a comfortable silence, each experience with you is a treasure.</p>
+                    <br><br>
+                    <p>&emsp;&emsp;I hope this year brings you everything your heart desires. May your dreams take flight, and may you achieve all the goals you've set for yourself. But most importantly, I wish for your happiness to know no bounds. You deserve all the love and joy in the world.</p>
+                    <br><br>
+                    <p>&emsp;&emsp;So, here's to you, ela, on your birthday! May this year be filled with new experiences, exciting opportunities, and endless laughter. I'm looking forward to creating even more beautiful memories together and watching you shine even brighter in the days to come. Remember that you are cherished not only on your birthday but every day of the year. So let's make this day unforgettable, just like you!.</p>
+                    <br><br>
+                    <p>&emsp;&emsp;Happy Birthday, dear friend! May your day be as incredible as you are, and may the coming year be your best one yet. Here's to many more adventures, laughter, and cherished moments together. </p>
+                    <br><br>
+                </div>
+                <div class="bottom">
+                    <p>Sincerely, your friend</p>
+                </div>
+            </div>
+        </section>
+
+        <script>
+            window.addEventListener("load", () => {
+                document.querySelector(".loader").classList.add("loader-hidden");
+
+                document.querySelector(".loader").addEventListener("transitioned", () => {
+                    document.body.removeChild(document.querySelector(".loader"));
+                });
+            });
+        </script>
+
+        <script>
+            /*Scroll Bar*/
+            window.onload = function () {
+                let progress = document.getElementById('progressbar');
+                let totalHeight = document.body.scrollHeight - window.innerHeight;
+
+                window.onscroll = function () {
+                    let progressHeight = (window.pageYOffset / totalHeight) * 100;
+                    progress.style.height = progressHeight + "%";
+                }
+            }
+        </script>
+
+        <script>
+            // Tangkap event contextmenu (klik kanan)
+            document.addEventListener("contextmenu", function (e) {
+            // Batalkan event untuk mencegah munculnya menu konteks
+            e.preventDefault();
+            });
+
+            // Tangkap event selectstart (pemilihan teks)
+            document.addEventListener("selectstart", function (e) {
+            // Batalkan event untuk mencegah pemilihan teks
+            e.preventDefault();
+            });
+        </script>   
+        
+    </body>
+</html>
