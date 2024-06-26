@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Wallpaper</title>
+        <link rel="stylesheet" href="wallpaper-13.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Edu+NSW+ACT+Foundation:wght@500&family=Kalam&family=Nunito:wght@300&display=swap" rel="stylesheet">
+
+        </script src="momentum.min.js"></script>
+
+        <style>
+            .loader {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: #333333;
+                transition: opacity 0.75s, visibility 0.75s;
+            }
+
+            .loader--hidden {
+                opacity: 0;
+                visibility: hidden;
+            }
+
+            .loader::after {
+                content: "";
+                width: 40px;
+                height: 40px;
+                border: 8px solid #dddddd;
+                border-top-color: #1498cc;
+                border-radius: 50%;
+                animation: loading 0.75s ease infinite;
+            }
+
+            @keyframes loading {
+                from {transform: rotate(0turn);}
+                to {transform: rotate(1turn);}
+            }
+        </style>
+
+        </head>
+
+    <body>
+        <div class="loader loader--hidden"></div>
+        <div id="progressbar"></div>
+        <div id="scrollPath"></div>
+        
+        <header class="header">
+            <a href="#" class="logo"></a>
+
+            <nav class="navbar">
+                <a href="../home.html" class="Home">Home</a>
+                <a href="../msg.html" class="Message">For You</a>
+                <a href="../music/music.html" class="Music">Music</a>    
+                <a href="#" class="Wallpaper">Wallpaper</a>
+                <a href="../about.html" class="About">About</a>
+            </nav>
+        </header>
+ 
+        <div class="container">
+            <div class="box">
+                <div class="dream">
+                    <img src="images/image (402).jpg">
+                    <img src="images/image (403).jpg">
+                    <img src="images/image (406).jpg">
+                    <img src="images/image (407).jpg">  
+                    <img src="images/image (408).jpg">
+                    <img src="images/image (409).jpg">
+                    <img src="images/image (410).jpg">
+                    <img src="images/image (412).jpg">
+                    <img src="images/image (413).jpg">
+                    <img src="images/image (416).jpg">
+                    <img src="images/image (436).jpg">
+                    <img src="images/image (440).jpg">
+                </div>
+
+                <div class="dream">
+                    <img src="images/image (417).jpg">
+                    <img src="images/image (419).jpg">
+                    <img src="images/image (420).jpg">
+                    <img src="images/image (421).jpg">
+                    <img src="images/image (422).jpg">
+                    <img src="images/image (423).jpg">
+                    <img src="images/image (424).jpg">
+                    <img src="images/image (425).jpg">
+                    <img src="images/image (426).jpg">
+                    <img src="images/image (427).jpg">
+                </div>
+
+                <div class="dream">
+                    <img src="images/image (428).jpg">  
+                    <img src="images/image (429).jpg">
+                    <img src="images/image (430).jpg">
+                    <img src="images/image (431).jpg">
+                    <img src="images/image (432).jpg">
+                    <img src="images/image (433).jpg">
+                    <img src="images/image (434).jpg">
+                    <img src="images/image (435).jpg">
+                    <img src="images/image (437).jpg">
+                    <img src="images/image (438).jpg">
+                    <img src="images/image (439).jpg">
+                    <img src="images/image (405).jpg">
+                    <img src="images/image (411).jpg">
+                    <img src="images/image (414).jpg">
+                    <img src="images/image (418).jpg">
+                    <img src="images/image (441).jpg">
+                </div>
+            </div>
+        </div>
+
+
+        <ul>
+            <li><a href="wallpaper-12.html" class="prev">Previous</a></li>
+            
+            <li class="pageNumber"><a href="wallpaper-1.html">1</a></li>
+            <li class="pageNumber"><a href="wallpaper-2.html">2</a></li>
+            <li class="pageNumber"><a href="wallpaper-3.html">3</a></li>
+            <li class="pageNumber"><a href="wallpaper-4.html">4</a></li>
+            <li class="pageNumber"><a href="wallpaper-5.html">5</a></li>
+            <li class="pageNumber"><a href="wallpaper-6.html">6</a></li>
+            <li class="pageNumber"><a href="wallpaper-7.html">7</a></li>
+            <li class="pageNumber"><a href="wallpaper-8.html">8</a></li>
+            <li class="pageNumber"><a href="wallpaper-9.html">9</a></li>
+            <li class="pageNumber"><a href="wallpaper-10.html">10</a></li>
+            <li class="pageNumber"><a href="wallpaper-11.html">11</a></li>
+            <li class="pageNumber"><a href="wallpaper-12.html">12</a></li>
+            <li class="pageNumber"><a href="#">13</a></li>
+            <li class="pageNumber"><a href="wallpaper-14.html">14</a></li>
+            <li class="pageNumber"><a href="wallpaper-15.html">15</a></li>
+
+            <li><a href="wallpaper-14.html" class="next">Next</a></li>
+        </ul>
+
+        <script>
+            /*Scroll Bar*/
+            window.onload = function () {
+                let progress = document.getElementById('progressbar');
+                let totalHeight = document.body.scrollHeight - window.innerHeight;
+
+                window.onscroll = function () {
+                    let progressHeight = (window.pageYOffset / totalHeight) * 100;
+                    progress.style.height = progressHeight + "%";
+                }
+            }
+        </script>
+
+        </script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+        <script>
+            window.addEventListener("load", () => {
+                document.querySelector(".loader").classList.add("loader-hidden");
+
+                document.querySelector(".loader").addEventListener("transitioned", () => {
+                    document.body.removeChild(document.querySelector(".loader"));
+                });
+            });
+        </script>
+
+        <script>
+            // Tangkap event contextmenu (klik kanan)
+            document.addEventListener("contextmenu", function (e) {
+            // Batalkan event untuk mencegah munculnya menu konteks
+            e.preventDefault();
+            });
+
+            // Tangkap event selectstart (pemilihan teks)
+            document.addEventListener("selectstart", function (e) {
+            // Batalkan event untuk mencegah pemilihan teks
+            e.preventDefault();
+            });
+        </script>
+
+    </body>
+</html>
