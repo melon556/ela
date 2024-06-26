@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>About</title>
+        <link rel="stylesheet" href="about.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Edu+NSW+ACT+Foundation:wght@500&family=Kalam&family=Nunito:wght@300&display=swap" rel="stylesheet">
+
+        </head>
+
+    <body>
+        <div id="progressbar"></div>
+        <div id="scrollPath"></div>
+        
+        <header class="header">
+            <a href="#" class="logo"></a>
+
+            <nav class="navbar">
+                <a href="index.html" class="Home">Home</a>
+                <a href="msg.html" class="Message">For You</a>
+                <a href="music/music.html" class="Music">Music</a> 
+                <a href="wallpaper/wallpaper-1.html" class="Wallpaper">Wallpaper</a>
+                <a href="#" class="About">About</a>
+            </nav>
+        </header>
+ 
+        <section class="home" id="home">
+            <div class="home-content">
+                <h2>Happy Birthday</h2>&nbsp;
+                <h3>I made this for fun, and I didn't have much time to work on it.</h3>
+                &nbsp;
+                <h3>Therefore, I apologize if there are parts that are not quite right or parts that you don't like.</h3>
+                <h3>Thank you</h3>&nbsp;
+                <p>By Melon</p>     
+   
+            </div>
+        </section>
+
+        <script>
+            /*Scroll Bar*/
+            window.onload = function () {
+                let progress = document.getElementById('progressbar');
+                let totalHeight = document.body.scrollHeight - window.innerHeight;
+
+                window.onscroll = function () {
+                    let progressHeight = (window.pageYOffset / totalHeight) * 100;
+                    progress.style.height = progressHeight + "%";
+                }
+            }
+        </script>
+
+        <script>
+            // Tangkap event contextmenu (klik kanan)
+            document.addEventListener("contextmenu", function (e) {
+            // Batalkan event untuk mencegah munculnya menu konteks
+            e.preventDefault();
+            });
+
+            // Tangkap event selectstart (pemilihan teks)
+            document.addEventListener("selectstart", function (e) {
+            // Batalkan event untuk mencegah pemilihan teks
+            e.preventDefault();
+            });
+        </script>
+
+    </body>
+</html>
